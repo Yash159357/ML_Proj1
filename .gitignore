@@ -1,3 +1,4 @@
 venv/
 .idea/
 ML_Project1.egg-info/
+.artifact
