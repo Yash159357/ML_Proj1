@@ -2,4 +2,8 @@ pandas
 numpy
 seaborn
 types-setuptools
+matplotlib
+catboost
+xgboost
+scikit-learn
 -e .
