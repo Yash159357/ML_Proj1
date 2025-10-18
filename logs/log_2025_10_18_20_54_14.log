@@ -1,0 +1,54 @@
+2025-10-18 20:54:14,033 - ml_project_logger - INFO - Logging initialized. Log file: C:\Users\YASH\Desktop\DataScienceProjects\ML_Proj1\logs\log_2025_10_18_20_54_14.log
+2025-10-18 20:54:17,632 - ml_project_logger - INFO - Initiating DataIngestion...
+2025-10-18 20:54:17,757 - ml_project_logger - INFO - Data read as pandas Dataframe
+2025-10-18 20:54:17,763 - ml_project_logger - INFO - Train-Test Split Initiated...
+2025-10-18 20:54:17,773 - ml_project_logger - INFO - Data Ingestion Completed...
+2025-10-18 20:54:17,773 - ml_project_logger - INFO - Starting data transformation process
+2025-10-18 20:54:17,774 - ml_project_logger - INFO - Loading training data from: artifact\train.csv
+2025-10-18 20:54:17,777 - ml_project_logger - INFO - Training data loaded. Shape: (800, 8)
+2025-10-18 20:54:17,778 - ml_project_logger - INFO - Loading test data from: artifact\test.csv
+2025-10-18 20:54:17,780 - ml_project_logger - INFO - Test data loaded. Shape: (200, 8)
+2025-10-18 20:54:17,780 - ml_project_logger - INFO - Getting data transformer object
+2025-10-18 20:54:17,781 - ml_project_logger - INFO - Creating data transformer object
+2025-10-18 20:54:17,782 - ml_project_logger - INFO - Numerical features: ['reading_score', 'writing_score']
+2025-10-18 20:54:17,782 - ml_project_logger - INFO - Categorical features: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+2025-10-18 20:54:17,782 - ml_project_logger - INFO - Initializing numerical pipeline
+2025-10-18 20:54:17,783 - ml_project_logger - INFO - Initializing categorical pipeline
+2025-10-18 20:54:17,783 - ml_project_logger - INFO - Creating column transformer
+2025-10-18 20:54:17,783 - ml_project_logger - INFO - Data transformer object created successfully
+2025-10-18 20:54:17,783 - ml_project_logger - INFO - Target column: math_score
+2025-10-18 20:54:17,783 - ml_project_logger - INFO - Splitting features and target
+2025-10-18 20:54:17,787 - ml_project_logger - INFO - Training features shape: (800, 7)
+2025-10-18 20:54:17,788 - ml_project_logger - INFO - Test features shape: (200, 7)
+2025-10-18 20:54:17,788 - ml_project_logger - INFO - Fitting and transforming training data
+2025-10-18 20:54:17,805 - ml_project_logger - INFO - Transforming test data
+2025-10-18 20:54:17,810 - ml_project_logger - INFO - Transformed training features shape: (800, 19)
+2025-10-18 20:54:17,811 - ml_project_logger - INFO - Transformed test features shape: (200, 19)
+2025-10-18 20:54:17,811 - ml_project_logger - INFO - Combining features and target
+2025-10-18 20:54:17,811 - ml_project_logger - INFO - Final training array shape: (800, 20)
+2025-10-18 20:54:17,811 - ml_project_logger - INFO - Final test array shape: (200, 20)
+2025-10-18 20:54:17,813 - ml_project_logger - INFO - Saving preprocessor object to: artifact\preprocessor.pkl
+2025-10-18 20:54:17,819 - ml_project_logger - INFO - Preprocessor saved successfully
+2025-10-18 20:54:17,819 - ml_project_logger - INFO - Data transformation completed successfully
+2025-10-18 20:54:17,820 - ml_project_logger - INFO - Splitting training and test input data
+2025-10-18 20:54:17,822 - ml_project_logger - INFO - Starting model evaluation...
+2025-10-18 20:54:19,871 - ml_project_logger - INFO - 
+=== Model Evaluation Results ===
+2025-10-18 20:54:19,872 - ml_project_logger - INFO - LinearRegression          | Test Score: 0.8804 | Train Score: 0.8743 | Diff: 0.0061
+2025-10-18 20:54:19,873 - ml_project_logger - INFO - RandomForestRegressor     | Test Score: 0.8504 | Train Score: 0.9765 | Diff: 0.1261
+2025-10-18 20:54:19,873 - ml_project_logger - INFO - CatBoostRegressor         | Test Score: 0.8504 | Train Score: 0.9587 | Diff: 0.1082
+2025-10-18 20:54:19,873 - ml_project_logger - INFO - XGBRegressor              | Test Score: 0.8212 | Train Score: 0.9955 | Diff: 0.1743
+2025-10-18 20:54:19,873 - ml_project_logger - INFO - GradientBoostingRegressor | Test Score: 0.8722 | Train Score: 0.9050 | Diff: 0.0328
+2025-10-18 20:54:19,874 - ml_project_logger - INFO - AdaBoostRegressor         | Test Score: 0.8516 | Train Score: 0.8518 | Diff: 0.0001
+2025-10-18 20:54:19,875 - ml_project_logger - INFO - KNeighborsRegressor       | Test Score: 0.4756 | Train Score: 0.6988 | Diff: 0.2232
+2025-10-18 20:54:19,875 - ml_project_logger - INFO - DecisionTreeRegressor     | Test Score: 0.7473 | Train Score: 0.9997 | Diff: 0.2523
+2025-10-18 20:54:19,875 - ml_project_logger - INFO - 
+=== Best Model ===
+2025-10-18 20:54:19,875 - ml_project_logger - INFO - Selected Model: LinearRegression
+2025-10-18 20:54:19,876 - ml_project_logger - INFO - Test Score: 0.8804
+2025-10-18 20:54:19,876 - ml_project_logger - INFO - Train Score: 0.8743
+2025-10-18 20:54:19,876 - ml_project_logger - INFO - Train-Test Difference: 0.0061
+2025-10-18 20:54:19,876 - ml_project_logger - INFO - 
+Retraining best model on full training data...
+2025-10-18 20:54:19,878 - ml_project_logger - INFO - Saving best model to artifact\model.pkl
+2025-10-18 20:54:19,880 - ml_project_logger - INFO - Model training and saving completed successfully!
