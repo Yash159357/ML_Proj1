@@ -6,4 +6,6 @@ matplotlib
 catboost
 xgboost
 scikit-learn
+dill
+fsspec
 -e .
