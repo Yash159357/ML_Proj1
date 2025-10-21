@@ -8,4 +8,5 @@ xgboost
 scikit-learn
 dill
 fsspec
+flask
 -e .

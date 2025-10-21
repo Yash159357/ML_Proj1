@@ -4,6 +4,7 @@ import sys
 import dill
 import numpy as np
 import pandas as pd
+import dill
 from sklearn.metrics import r2_score, make_scorer
 from sklearn.model_selection import GridSearchCV, cross_val_score
 
@@ -11,6 +12,12 @@ from src.exception import CustomException
 from src.logger import logger
 
 # Parameter grids for hyperparameter tuning
+def load_object(file_path):
+    try:
+        with open(file_path, "rb") as file_obj:
+            return dill.load(file_obj)
+    except Exception as e:
+        raise CustomException(e, sys)
 
 def save_object(file_path, obj):
     dir_path = os.path.dirname(file_path)
