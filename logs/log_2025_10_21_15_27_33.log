@@ -1,0 +1,104 @@
+2025-10-21 15:27:33,616 - ml_project_logger - INFO - Logging initialized. Log file: C:\Users\YASH\Desktop\DataScienceProjects\ML_Proj1\logs\log_2025_10_21_15_27_33.log
+2025-10-21 15:27:37,575 - ml_project_logger - INFO - Initiating DataIngestion...
+2025-10-21 15:27:37,716 - ml_project_logger - INFO - Data read as pandas Dataframe
+2025-10-21 15:27:37,725 - ml_project_logger - INFO - Train-Test Split Initiated...
+2025-10-21 15:27:37,738 - ml_project_logger - INFO - Data Ingestion Completed...
+2025-10-21 15:27:37,738 - ml_project_logger - INFO - Starting data transformation process
+2025-10-21 15:27:37,739 - ml_project_logger - INFO - Loading training data from: artifact\train.csv
+2025-10-21 15:27:37,742 - ml_project_logger - INFO - Training data loaded. Shape: (800, 8)
+2025-10-21 15:27:37,742 - ml_project_logger - INFO - Loading test data from: artifact\test.csv
+2025-10-21 15:27:37,744 - ml_project_logger - INFO - Test data loaded. Shape: (200, 8)
+2025-10-21 15:27:37,744 - ml_project_logger - INFO - Getting data transformer object
+2025-10-21 15:27:37,744 - ml_project_logger - INFO - Creating data transformer object
+2025-10-21 15:27:37,746 - ml_project_logger - INFO - Numerical features: ['reading_score', 'writing_score']
+2025-10-21 15:27:37,747 - ml_project_logger - INFO - Categorical features: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+2025-10-21 15:27:37,747 - ml_project_logger - INFO - Initializing numerical pipeline
+2025-10-21 15:27:37,748 - ml_project_logger - INFO - Initializing categorical pipeline
+2025-10-21 15:27:37,748 - ml_project_logger - INFO - Creating column transformer
+2025-10-21 15:27:37,749 - ml_project_logger - INFO - Data transformer object created successfully
+2025-10-21 15:27:37,749 - ml_project_logger - INFO - Target column: math_score
+2025-10-21 15:27:37,750 - ml_project_logger - INFO - Splitting features and target
+2025-10-21 15:27:37,753 - ml_project_logger - INFO - Training features shape: (800, 7)
+2025-10-21 15:27:37,754 - ml_project_logger - INFO - Test features shape: (200, 7)
+2025-10-21 15:27:37,754 - ml_project_logger - INFO - Fitting and transforming training data
+2025-10-21 15:27:37,776 - ml_project_logger - INFO - Transforming test data
+2025-10-21 15:27:37,782 - ml_project_logger - INFO - Transformed training features shape: (800, 19)
+2025-10-21 15:27:37,782 - ml_project_logger - INFO - Transformed test features shape: (200, 19)
+2025-10-21 15:27:37,782 - ml_project_logger - INFO - Combining features and target
+2025-10-21 15:27:37,784 - ml_project_logger - INFO - Final training array shape: (800, 20)
+2025-10-21 15:27:37,784 - ml_project_logger - INFO - Final test array shape: (200, 20)
+2025-10-21 15:27:37,784 - ml_project_logger - INFO - Saving preprocessor object to: artifact\preprocessor.pkl
+2025-10-21 15:27:37,792 - ml_project_logger - INFO - Preprocessor saved successfully
+2025-10-21 15:27:37,792 - ml_project_logger - INFO - Data transformation completed successfully
+2025-10-21 15:27:37,792 - ml_project_logger - INFO - Splitting training and test input data
+2025-10-21 15:27:37,796 - ml_project_logger - INFO - Starting model evaluation with hyperparameter tuning...
+2025-10-21 15:27:37,796 - ml_project_logger - INFO - 
+Evaluating LinearRegression...
+2025-10-21 15:27:37,797 - ml_project_logger - INFO - Tuning hyperparameters for LinearRegression...
+2025-10-21 15:27:42,077 - ml_project_logger - INFO - Best parameters for LinearRegression: {'fit_intercept': True, 'positive': False}
+2025-10-21 15:27:42,083 - ml_project_logger - INFO - LinearRegression - Test Score: 0.8804, Train Score: 0.8743
+2025-10-21 15:27:42,084 - ml_project_logger - INFO - 
+Evaluating RandomForestRegressor...
+2025-10-21 15:27:42,084 - ml_project_logger - INFO - Tuning hyperparameters for RandomForestRegressor...
+2025-10-21 15:28:27,487 - ml_project_logger - INFO - Best parameters for RandomForestRegressor: {'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 200}
+2025-10-21 15:28:27,630 - ml_project_logger - INFO - RandomForestRegressor - Test Score: 0.8536, Train Score: 0.9166
+2025-10-21 15:28:27,630 - ml_project_logger - INFO - 
+Evaluating CatBoostRegressor...
+2025-10-21 15:28:27,631 - ml_project_logger - INFO - Tuning hyperparameters for CatBoostRegressor...
+2025-10-21 15:29:04,271 - ml_project_logger - INFO - Best parameters for CatBoostRegressor: {'depth': 4, 'iterations': 100, 'l2_leaf_reg': 7, 'learning_rate': 0.1}
+2025-10-21 15:29:04,286 - ml_project_logger - INFO - CatBoostRegressor - Test Score: 0.8671, Train Score: 0.8834
+2025-10-21 15:29:04,286 - ml_project_logger - INFO - 
+Evaluating XGBRegressor...
+2025-10-21 15:29:04,287 - ml_project_logger - INFO - Tuning hyperparameters for XGBRegressor...
+2025-10-21 15:29:12,028 - ml_project_logger - INFO - Best parameters for XGBRegressor: {'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
+2025-10-21 15:29:12,034 - ml_project_logger - INFO - XGBRegressor - Test Score: 0.8715, Train Score: 0.9013
+2025-10-21 15:29:12,034 - ml_project_logger - INFO - 
+Evaluating GradientBoostingRegressor...
+2025-10-21 15:29:12,035 - ml_project_logger - INFO - Tuning hyperparameters for GradientBoostingRegressor...
+2025-10-21 15:29:45,188 - ml_project_logger - INFO - Best parameters for GradientBoostingRegressor: {'learning_rate': 0.1, 'max_depth': 3, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 50}
+2025-10-21 15:29:45,193 - ml_project_logger - INFO - GradientBoostingRegressor - Test Score: 0.8678, Train Score: 0.8864
+2025-10-21 15:29:45,193 - ml_project_logger - INFO - 
+Evaluating AdaBoostRegressor...
+2025-10-21 15:29:45,194 - ml_project_logger - INFO - Tuning hyperparameters for AdaBoostRegressor...
+2025-10-21 15:30:00,270 - ml_project_logger - INFO - Best parameters for AdaBoostRegressor: {'learning_rate': 1.0, 'loss': 'exponential', 'n_estimators': 200}
+2025-10-21 15:30:00,376 - ml_project_logger - INFO - AdaBoostRegressor - Test Score: 0.8462, Train Score: 0.8559
+2025-10-21 15:30:00,376 - ml_project_logger - INFO - 
+Evaluating KNeighborsRegressor...
+2025-10-21 15:30:00,377 - ml_project_logger - INFO - Tuning hyperparameters for KNeighborsRegressor...
+2025-10-21 15:30:01,276 - ml_project_logger - INFO - Best parameters for KNeighborsRegressor: {'n_neighbors': 10, 'p': 1, 'weights': 'distance'}
+2025-10-21 15:30:01,699 - ml_project_logger - INFO - KNeighborsRegressor - Test Score: 0.5721, Train Score: 0.9997
+2025-10-21 15:30:01,700 - ml_project_logger - INFO - 
+Evaluating DecisionTreeRegressor...
+2025-10-21 15:30:01,701 - ml_project_logger - INFO - Tuning hyperparameters for DecisionTreeRegressor...
+2025-10-21 15:30:02,445 - ml_project_logger - INFO - Best parameters for DecisionTreeRegressor: {'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 5}
+2025-10-21 15:30:02,452 - ml_project_logger - INFO - DecisionTreeRegressor - Test Score: 0.7196, Train Score: 0.8934
+2025-10-21 15:30:02,453 - ml_project_logger - INFO - 
+=== Model Evaluation Results ===
+2025-10-21 15:30:02,454 - ml_project_logger - INFO - LinearRegression          | Test Score: 0.8804 | Train Score: 0.8743 | Diff: 0.0061
+2025-10-21 15:30:02,455 - ml_project_logger - INFO - Best params for LinearRegression: {'fit_intercept': True, 'positive': False}
+2025-10-21 15:30:02,455 - ml_project_logger - INFO - RandomForestRegressor     | Test Score: 0.8536 | Train Score: 0.9166 | Diff: 0.0630
+2025-10-21 15:30:02,456 - ml_project_logger - INFO - Best params for RandomForestRegressor: {'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 200}
+2025-10-21 15:30:02,457 - ml_project_logger - INFO - CatBoostRegressor         | Test Score: 0.8671 | Train Score: 0.8834 | Diff: 0.0163
+2025-10-21 15:30:02,457 - ml_project_logger - INFO - Best params for CatBoostRegressor: {'depth': 4, 'iterations': 100, 'l2_leaf_reg': 7, 'learning_rate': 0.1}
+2025-10-21 15:30:02,458 - ml_project_logger - INFO - XGBRegressor              | Test Score: 0.8715 | Train Score: 0.9013 | Diff: 0.0298
+2025-10-21 15:30:02,459 - ml_project_logger - INFO - Best params for XGBRegressor: {'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
+2025-10-21 15:30:02,460 - ml_project_logger - INFO - GradientBoostingRegressor | Test Score: 0.8678 | Train Score: 0.8864 | Diff: 0.0186
+2025-10-21 15:30:02,460 - ml_project_logger - INFO - Best params for GradientBoostingRegressor: {'learning_rate': 0.1, 'max_depth': 3, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 50}
+2025-10-21 15:30:02,462 - ml_project_logger - INFO - AdaBoostRegressor         | Test Score: 0.8462 | Train Score: 0.8559 | Diff: 0.0096
+2025-10-21 15:30:02,462 - ml_project_logger - INFO - Best params for AdaBoostRegressor: {'learning_rate': 1.0, 'loss': 'exponential', 'n_estimators': 200}
+2025-10-21 15:30:02,464 - ml_project_logger - INFO - KNeighborsRegressor       | Test Score: 0.5721 | Train Score: 0.9997 | Diff: 0.4275
+2025-10-21 15:30:02,464 - ml_project_logger - INFO - Best params for KNeighborsRegressor: {'n_neighbors': 10, 'p': 1, 'weights': 'distance'}
+2025-10-21 15:30:02,465 - ml_project_logger - INFO - DecisionTreeRegressor     | Test Score: 0.7196 | Train Score: 0.8934 | Diff: 0.1738
+2025-10-21 15:30:02,465 - ml_project_logger - INFO - Best params for DecisionTreeRegressor: {'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 2, 'min_samples_split': 5}
+2025-10-21 15:30:02,466 - ml_project_logger - INFO - 
+=== Best Model ===
+2025-10-21 15:30:02,466 - ml_project_logger - INFO - Selected Model: LinearRegression
+2025-10-21 15:30:02,466 - ml_project_logger - INFO - Test Score: 0.8804
+2025-10-21 15:30:02,467 - ml_project_logger - INFO - Train Score: 0.8743
+2025-10-21 15:30:02,468 - ml_project_logger - INFO - Train-Test Difference: 0.0061
+2025-10-21 15:30:02,469 - ml_project_logger - INFO - Best parameters used: {'fit_intercept': True, 'positive': False}
+2025-10-21 15:30:02,469 - ml_project_logger - INFO - 
+Retraining best model on full training data...
+2025-10-21 15:30:02,477 - ml_project_logger - INFO - Saving best model to artifact\model.pkl
+2025-10-21 15:30:02,488 - ml_project_logger - INFO - Model training and saving completed successfully!
+2025-10-21 15:30:02,491 - ml_project_logger - INFO - Final R2 score on test set: 0.8869
