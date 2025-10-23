@@ -9,4 +9,4 @@ scikit-learn
 dill
 fsspec
 flask
--e .
+gunicorn

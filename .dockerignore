@@ -1,0 +1,11 @@
+venv/
+notebook/
+artifacts/raw.csv
+artifacts/train.csv
+artifacts/test.csv
+__pycache__/
+*.pyc
+*.pkl
+*.csv
+*.ipynb
+.DS_Store
