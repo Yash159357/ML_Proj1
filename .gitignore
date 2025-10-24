@@ -1,4 +1,7 @@
 venv/
 .idea/
 ML_Project1.egg-info/
-artifact/
+
+#artifact/raw.csv
+artifact/test.csv
+artifact/train.csv
